@@ -1,0 +1,70 @@
+// DESENVOLVIDO POR: ENGENHEIRO LUCAS MACEDO
+//TESTE DE CORES LCD I2C 16X2 GROVE KIT SENSORS SEEED STUDIO
+// CONTATO: lucaswmsilva@gmail.com
+
+
+#include <Wire.h>
+#include "rgb_lcd.h"
+
+rgb_lcd lcd;
+
+const int colorR = 255;
+const int colorG = 255;
+const int colorB = 255;
+const int colorRo = 0;
+const int colorGo = 0;
+const int colorBo = 0;
+
+
+
+
+void setup()
+{
+  lcd.begin(16, 2);
+  
+    
+}
+
+void loop()
+{
+    
+     lcd.setRGB(colorRo, colorG, colorBo);
+     lcd.print(" VERDE ");
+     delay(1000);
+     lcd.clear();
+     
+      lcd.setRGB(colorRo, colorGo, colorB);
+      lcd.print(" AZUL ");
+      delay(1000);
+       lcd.clear();
+       
+       lcd.setRGB(colorR, colorGo, colorBo);
+       lcd.print(" VERMELHO ");
+       delay(1000);
+        lcd.clear();
+        
+        lcd.setRGB(colorR, colorGo, colorB);
+        lcd.print(" MAGENTA ");
+        delay(1000);
+         lcd.clear();
+         
+          lcd.setRGB(colorRo, colorG, colorB);
+          lcd.print(" CIANO ");
+          delay(1000);
+          lcd.clear();
+           
+            lcd.setRGB(colorR, colorG, colorB);
+            lcd.print(" BRANCO ");
+            delay(1000);
+            lcd.clear();
+            
+            lcd.setRGB(colorR, colorG, colorBo);
+            lcd.print(" AMARELO ");
+            delay(1000);
+            lcd.clear();
+    
+
+   
+    
+}
+
